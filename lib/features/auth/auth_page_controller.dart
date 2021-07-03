@@ -23,6 +23,11 @@ class AuthPageController extends GetxController {
   signinWithGoogle() async {
     isBusy.value = true;
     final GoogleSignInAccount googleUser = await GoogleSignIn().signIn();
+    if (googleUser == null) {
+      isBusy.value = false;
+      return;
+    }
+
     final GoogleSignInAuthentication googleAuth =
         await googleUser.authentication;
     final googleAuthCredential = GoogleAuthProvider.credential(
