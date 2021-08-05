@@ -1,6 +1,7 @@
 # one_person_twitter
 
-A new Flutter project for posting tweets.
+A Single person Tweet app to demonstrate Firebase Authentication and Cloud Architecture.
+Uses Getx as state management.
 
 ## Getting Started
 
